@@ -49,7 +49,7 @@ export default function App() {
 
   return (
     <div className='flex justify-center items-center'>
-      <div className='bg-white mt-[5.5em] mb-16 md:mt-[10.6875em] md:mb-24 mx-4 rounded-t-3xl rounded-bl-3xl rounded-br-[100px] py-12 px-6 md:p-14 md:w-[52.5em] md:flex-initial'>
+      <div className='bg-white mt-[5.5em] mb-16 md:mt-[10em] md:mb-24 mx-4 rounded-t-3xl rounded-bl-3xl rounded-br-[100px] md:rounded-br-[200px] py-12 px-6 md:p-14 md:w-[52.5em] md:flex-initial'>
         <form className='flex gap-x-4 md:gap-x-8 pb-16 md:pb-12 border-b border-gray-300 relative'
           onSubmit={handleSubmit(onValid, onInvalid)}>
 
