@@ -14,11 +14,6 @@ export default function App() {
   const [data, setData] = useState<{ birthday?: IDate, age?: IDate, isValid: boolean }>({ isValid: false });
 
   const { register, handleSubmit, formState: { errors }, getValues } = useForm<FieldValues | IForm>({
-    defaultValues: {
-      day: 18,
-      month: 1,
-      year: 2001
-    },
     mode: 'onChange'
   });
 
