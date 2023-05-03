@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Input from './components/Input';
 import { getAge, IDate } from './utilities/date';
 import { FieldValues, useForm } from 'react-hook-form';
@@ -10,13 +10,10 @@ export interface IForm {
   year: number;
 }
 
-// TODO: add validate method for day
-// TODO: use usestate with react-hook-form
-
 export default function App() {
   const [data, setData] = useState<{ birthday?: IDate, age?: IDate, isValid: boolean }>({ isValid: false });
 
-  const { register, handleSubmit, watch, formState: { errors }, getValues } = useForm<FieldValues | IForm>({
+  const { register, handleSubmit, formState: { errors }, getValues } = useForm<FieldValues | IForm>({
     defaultValues: {
       day: 18,
       month: 1,
@@ -96,7 +93,8 @@ export default function App() {
           />
 
           {/* arrow-down btn*/}
-          <button className='bg-purple hover:bg-black w-16 md:w-24 h-16 md:h-24 flex items-center justify-center rounded-full absolute -bottom-8 md:-bottom-12 left-0 right-0 mx-auto md:mr-0  outline-offset-4 outline-purple'>
+          <button className='bg-purple hover:bg-black w-16 md:w-24 h-16 md:h-24 flex items-center justify-center rounded-full absolute -bottom-8 md:-bottom-12 left-0 right-0 mx-auto md:mr-0  outline-offset-4 outline-purple'
+          title='Submit'>
             <img className='w-6 h-6 md:w-11 md:h-11' src="./assets/arrow-down.svg" alt="" />
           </button>
         </form>
